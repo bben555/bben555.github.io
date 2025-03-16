@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Perspectives in Early Childhood Education</title>
+    <style>
+        :root {
+            --primary: #5E8B7E;
+            --secondary: #A7C4BC;
+            --accent: #E2C290;
+            --dark: #2F3E46;
+            --light: #F7F7F2;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Animation for images */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .image-container img {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/400?text=Indigenous+Early+Learning');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        nav li a:hover {
+            background-color: var(--primary);
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        .circular-design {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--dark);
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+        
+        .medicine-wheel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .medicine-wheel::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-image: url('/api/placeholder/200/200?text=Medicine+Wheel');
+            background-size: cover;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: 3px solid var(--primary);
+        }
+        
+        .wheel-section {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        .north {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .east {
+            background-color: #FFF2CC;
+            color: #7D5A00;
+        }
+        
+        .south {
+            background-color: #FFE0E0;
+            color: #AC0000;
+        }
+        
+        .west {
+            background-color: #D6EAF8;
+            color: #154360;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .sensory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .sensory-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+            padding: 20px;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .sensory-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+        }
+        
+        .image-container {
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .medicine-wheel {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Indigenous Perspectives in Early Childhood Education</h1>
+            <p>Decolonizing and Indigenizing Early Learning Environments</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#policy">Policy Statement</a></li>
+                <li><a href="#classroom">Classroom Design</a></li>
+                <li><a href="#activities">Learning Activities</a></li>
+                <li><a href="#actions">Actions</a></li>
+                <li><a href="#plan">Implementation</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+            </ul>
+            <script>
+                // Add smooth scrolling for navigation links
+                document.addEventListener('DOMContentLoaded', function() {
+                    const navLinks = document.querySelectorAll('nav a');
+                    
+                    for (const link of navLinks) {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop - 70, // Account for fixed nav height
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="policy">
+            <h2>Policy Statement</h2>
+            <div class="card">
+                <h3>Holistic Learning Policy for an Integrated Indigenous and Non-Indigenous Early Learning Environment</h3>
+                <p>This policy statement is designed for a mixed classroom environment with both Indigenous and non-Indigenous children, creating a space where diverse cultural perspectives are honored, with particular emphasis on Indigenous worldviews and ways of knowing.</p>
+                
+                <h4>Our Foundational Principles:</h4>
+                <p>We acknowledge that meaningful reconciliation begins in early childhood. Our learning environment embraces the wisdom of Indigenous perspectives while creating space for all children to develop understanding, respect, and appreciation for Indigenous histories, cultures, and ways of knowing. We commit to:</p>
+                
+                <ol>
+                    <li>Honoring the land on which our learning takes place through regular acknowledgment and teachings about the traditional territories and the peoples who have stewarded these lands since time immemorial.</li>
+                    <li>Integrating Indigenous languages, stories, and cultural practices throughout our curriculum, not as isolated activities but as foundational elements of our daily learning.</li>
+                    <li>Engaging Elders and Knowledge Keepers as essential educators and mentors who bring invaluable wisdom and cultural continuity to our learning community.</li>
+                    <li>Embracing holistic educational approaches that nurture the intellectual, physical, emotional, and spiritual aspects of each child's development.</li>
+                    <li>Creating continuous opportunities for families to participate in and contribute to our learning community, recognizing their role as children's first teachers.</li>
+                </ol>
+                
+                <h4>Alignment with TRC Calls to Action:</h4>
+                <p>This policy directly addresses several TRC Calls to Action related to education, including:</p>
+                
+                <ul>
+                    <li><strong>Call #10:</strong> By developing culturally appropriate curricula that integrate Indigenous knowledge and teaching methods.</li>
+                    <li><strong>Call #12:</strong> Through early childhood education programs that are culturally appropriate for Indigenous families.</li>
+                    <li><strong>Call #63:</strong> By building student capacity for intercultural understanding, empathy, and mutual respect from the earliest years.</li>
+                    <li><strong>Call #64:</strong> By including age-appropriate curriculum on residential schools, treaties, and Indigenous peoples' historical and contemporary contributions.</li>
+                </ul>
+                
+                <p>Our approach recognizes that decolonization in early childhood education requires more than adding Indigenous content—it necessitates a fundamental shift in how we conceptualize teaching and learning, moving from Eurocentric frameworks toward more holistic, land-based, and relationship-centered approaches.</p>
+            </div>
+        </section>
+        
+        <section id="classroom">
+            <h2>Designing a Decolonized-Indigenized Classroom</h2>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/1200/600?text=Natural+Learning+Environment" alt="Conceptual classroom layout featuring circular arrangement and natural elements">
+            </div>
+            
+            <div class="card">
+                <h3>Physical Environment</h3>
+                <p>Our classroom embraces a fluid boundary between indoor and outdoor spaces, recognizing that meaningful learning occurs in connection with the natural world. The physical design includes:</p>
+                
+                <h4>Indoor Elements:</h4>
+                <ul>
+                    <li>A circular arrangement reflecting the medicine wheel, with learning centers organized to honor the four directions</li>
+                    <li>Natural materials predominate (wood, stone, plant fibers) rather than plastic</li>
+                    <li>Flexible, movable furniture allowing for gathering in circles</li>
+                    <li>Low shelving with natural materials and loose parts for exploration</li>
+                    <li>A dedicated "Elder's corner" with comfortable seating for storytelling and knowledge sharing</li>
+                </ul>
+                
+                <h4>Outdoor Elements:</h4>
+                <ul>
+                    <li>A natural playscape with native plants, rocks, logs, and water features</li>
+                    <li>A medicine wheel garden growing traditional plants used for teaching</li>
+                    <li>A covered outdoor gathering space for circle time regardless of weather</li>
+                    <li>Natural boundaries rather than fences where possible</li>
+                    <li>Dedicated space for fire ceremonies (when appropriate and with proper safety protocols)</li>
+                </ul>
+            </div>
+            
+            <h3>Sensory Elements</h3>
+            <div class="sensory-grid">
+                <div class="sensory-card">
+                    <h4>Visual</h4>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <img src="/api/placeholder/400/300?text=Indigenous+Art" alt="Indigenous artwork" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+                    <ul>
+                        <li>Images of diverse Indigenous peoples, particularly from local Nations</li>
+                        <li>Artwork created by Indigenous artists reflecting traditional and contemporary expressions</li>
+                        <li>Natural light prioritized over artificial lighting</li>
+                        <li>Nature-based color palette reflecting seasons</li>
+                        <li>Visible documentation of children's learning journeys</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Auditory</h4>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <img src="/api/placeholder/400/300?text=Traditional+Music" alt="Indigenous music instruments" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+                    <ul>
+                        <li>Indigenous music and language recordings available</li>
+                        <li>Natural acoustic properties with minimal artificial sounds</li>
+                        <li>Wind chimes and natural sound makers</li>
+                        <li>Moments of intentional silence for listening to natural sounds</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Tactile</h4>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <img src="/api/placeholder/400/300?text=Natural+Materials" alt="Natural tactile materials" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+                    <ul>
+                        <li>Variety of natural materials with different textures</li>
+                        <li>Traditional weaving materials</li>
+                        <li>Clay and natural modeling materials</li>
+                        <li>Sensory table with seasonal natural elements</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Olfactory</h4>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <img src="/api/placeholder/400/300?text=Sacred+Medicines" alt="Sacred medicines and herbs" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+                    <ul>
+                        <li>Sacred medicines present but used only in appropriate ceremonial contexts</li>
+                        <li>Natural plant aromas from indoor plants and healing herbs</li>
+                        <li>Seasonal harvests and traditional foods prepared with children</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Taste</h4>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <img src="/api/placeholder/400/300?text=Traditional+Foods" alt="Traditional Indigenous foods" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+                    <ul>
+                        <li>Traditional food preparation area</li>
+                        <li>Seasonal traditional foods incorporated into meals</li>
+                        <li>Berries and edible plants in the outdoor space</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Indigenous Cultural Elements</h3>
+                <p>The classroom incorporates authentic cultural elements that represent Indigenous worldviews:</p>
+                
+                <ul>
+                    <li><strong>Medicine Wheel:</strong> Central to the classroom organization, representing holistic learning and the interconnectedness of all aspects of development</li>
+                    <li><strong>Talking Stick/Feather:</strong> Used in circle gatherings to practice respectful listening</li>
+                    <li><strong>Traditional Stories:</strong> Books and oral storytelling resources from Indigenous authors and Knowledge Keepers</li>
+                    <li><strong>Natural Calendar:</strong> Marking time through seasonal changes rather than standard calendar months</li>
+                    <li><strong>Indigenous Languages:</strong> Labels, songs, and greetings in local Indigenous languages</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="activities">
+            <h2>Indigenous-Centered Learning Activities</h2>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/1200/600?text=Indigenous+Learning+Activities" alt="Children engaged in cultural learning activities">
+            </div>
+            
+            <div class="medicine-wheel">
+                <div class="wheel-section north">
+                    <h3>Our Relations: The Tree Family Circle</h3>
+                    <p>A recurring seasonal activity connecting children with trees as relations and teachers, following natural cycles while integrating traditional ecological knowledge.</p>
+                    <p>Children develop relationships with specific trees throughout the seasons, learning through direct observation and connection with the natural world.</p>
+                </div>
+                
+                <div class="wheel-section east">
+                    <h3>Seasons of Story: The Talking Circle Blanket</h3>
+                    <p>An activity centering Indigenous storytelling traditions while connecting children to seasonal cycles through collaborative creation of a storytelling blanket.</p>
+                    <p>Children gather seasonal natural materials to create a collective storytelling blanket that represents their learning journey throughout the year.</p>
+                </div>
+                
+                <div class="wheel-section south">
+                    <h3>Activity Process</h3>
+                    <ol>
+                        <li>Beginning the Circle (Fall): Introduction to seasonal storytelling concepts</li>
+                        <li>Seasonal Story Collection: Gathering outdoors, listening to traditional stories</li>
+                        <li>Story Medicine: Learning how stories serve as medicine and teaching</li>
+                        <li>Culminating Ceremony: Year-end gathering to celebrate the completed blanket</li>
+                    </ol>
+                </div>
+                
+                <div class="wheel-section west">
+                    <h3>Connection to Indigenous Worldviews</h3>
+                    <ul>
+                        <li>Honors oral traditions and intergenerational knowledge transmission</li>
+                        <li>Recognizes stories as living entities carrying cultural wisdom</li>
+                        <li>Follows seasonal protocols for when certain stories should be shared</li>
+                        <li>Connects narrative traditions to natural cycles</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="actions">
+            <h2>Actions for Decolonization and Indigenization</h2>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/1200/600?text=Elder+Knowledge+Sharing" alt="Elder sharing knowledge with children">
+            </div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Decolonization Actions</h3>
+                    <ol>
+                        <li><strong>Disrupt Time-Based Scheduling:</strong> Implement a flexible daily rhythm that follows natural cycles rather than rigid clock-based schedules.</li>
+                        <li><strong>Community Curriculum Development:</strong> Establish a curriculum council that includes Indigenous parents, Elders, and Knowledge Keepers as equal decision-makers alongside educators.</li>
+                        <li><strong>Reconceptualize Assessment:</strong> Move away from developmental checklists based on Western milestones toward narrative documentation that honors diverse ways of demonstrating knowledge.</li>
+                    </ol>
+                </div>
+                
+                <div class="card">
+                    <h3>Indigenization Actions</h3>
+                    <ol>
+                        <li><strong>Land-Based Learning Protocol:</strong> Establish a formal relationship with local Indigenous communities to develop protocols for land-based learning that centers Indigenous stewardship practices.</li>
+                        <li><strong>Language Immersion Moments:</strong> Create daily language immersion periods where Indigenous languages from the territory are centered.</li>
+                        <li><strong>Elder-in-Residence Program:</strong> Establish a funded Elder-in-Residence position where Knowledge Keepers are recognized as primary educators rather than "special guests."</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <section id="plan">
+            <h2>Implementation Plan: The Language Revitalization Circle</h2>
+            
+            <div class="circular-design" style="background-image: url('/api/placeholder/400/400?text=Medicine+Wheel'); background-size: cover; color: white; text-shadow: 0 0 4px rgba(0,0,0,0.8);">
+                Language<br>Revitalization<br>Circle
+            </div>
+            
+            <div class="card">
+                <h3>Plan Details</h3>
+                <p>This comprehensive plan combines the decolonization and Indigenization actions through establishing an ongoing Language Revitalization Circle within the early learning environment.</p>
+                
+                <h4>Location and Setting:</h4>
+                <ul>
+                    <li>A dedicated indoor language nest space designed with circular seating and natural materials</li>
+                    <li>Outdoor gathering spaces on the land for contextual language learning</li>
+                    <li>Virtual connections to other language revitalization initiatives when appropriate</li>
+                    <li>Community spaces where languages are used authentically</li>
+                </ul>
+                
+                <h4>Timeframe:</h4>
+                <ul>
+                    <li>Daily language circles (15-30 minutes)</li>
+                    <li>Weekly immersion sessions (2-3 hours)</li>
+                    <li>Monthly community language gatherings (half-day)</li>
+                    <li>Seasonal language celebrations aligned with traditional seasonal activities</li>
+                </ul>
+                
+                <h4>Participation Structure:</h4>
+                <ul>
+                    <li>Children participate through songs, games, stories, and daily activities conducted in Indigenous languages</li>
+                    <li>Educators commit to learning alongside children as co-learners</li>
+                    <li>Elders and Language Keepers lead sessions and provide guidance on pronunciation and cultural context</li>
+                    <li>Families are invited to learn basic phrases and participate in take-home language activities</li>
+                    <li>Community members with language knowledge are invited to share their expertise</li>
+                </ul>
+            </div>
+            
+            <h3>Sensory Elements in Implementation</h3>
+            <div class="sensory-grid">
+                <div class="sensory-card">
+                    <h4>Visual Elements</h4>
+                    <ul>
+                        <li>Visual syllabic charts and vocabulary posters</li>
+                        <li>Photographs of Indigenous language speakers from the community</li>
+                        <li>Hand-drawn illustrated storybooks featuring local landmarks</li>
+                        <li>Visual documentation of children's growing language use</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Auditory Elements</h4>
+                    <ul>
+                        <li>Daily songs, chants, and prayers in Indigenous languages</li>
+                        <li>Audio recordings of Elders speaking the language</li>
+                        <li>Natural sounds from the land that correspond with specific vocabulary</li>
+                        <li>Rhythmic games that incorporate language through movement</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Tactile Elements</h4>
+                    <ul>
+                        <li>Handling of natural objects while learning their names</li>
+                        <li>Creating traditional crafts while learning process words</li>
+                        <li>Texture cards with corresponding vocabulary</li>
+                        <li>Medicine pouch creation with items named in Indigenous language</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Olfactory Elements</h4>
+                    <ul>
+                        <li>Seasonal plant harvesting with learning of plant names</li>
+                        <li>Traditional food preparation with vocabulary learning</li>
+                        <li>Sacred medicines introduced with proper protocols</li>
+                        <li>Scent memory activities connecting language to aromas</li>
+                    </ul>
+                </div>
+                
+                <div class="sensory-card">
+                    <h4>Taste Elements</h4>
+                    <ul>
+                        <li>Traditional food tasting with vocabulary learning</li>
+                        <li>Seasonal berry harvesting and preparation</li>
+                        <li>Medicine tea preparation and tasting</li>
+                        <li>Garden growing with vocabulary for plant stages</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="evaluation">
+            <h2>Evaluation Approach</h2>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/1200/600?text=Sharing+Circle" alt="Sharing circle for evaluation and reflection">
+            </div>
+            
+            <div class="card">
+                <h3>Desired Outcomes</h3>
+                <ol>
+                    <li><strong>Increased Everyday Language Use:</strong> Children and educators regularly incorporating Indigenous language words and phrases into daily communication.</li>
+                    <li><strong>Community Capacity Building:</strong> Strengthened connections between the early learning center and language knowledge holders in the community.</li>
+                    <li><strong>Pedagogical Transformation:</strong> Shift from Western-centric teaching methods toward Indigenous pedagogies guided by Elders and Knowledge Keepers.</li>
+                    <li><strong>Family Engagement:</strong> Families learning alongside children and bringing language practice into home environments.</li>
+                    <li><strong>Identity Affirmation:</strong> Indigenous children experiencing pride and connection to their cultural identity through language exposure.</li>
+                    <li><strong>Cultural Understanding:</strong> Non-Indigenous children developing respect and appreciation for Indigenous languages and knowledge systems.</li>
+                    <li><strong>Systemic Change:</strong> Development of a replicable model for language revitalization in early learning settings that challenges colonial educational frameworks.</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h3>Evaluation Methods</h3>
+                <p>The evaluation approach incorporates Indigenous methodologies that value relationship, story, and collective reflection:</p>
+                
+                <h4>Regular Sharing Circles:</h4>
+                <ul>
+                    <li>Monthly circles with children to gather their experiences through stories and artwork</li>
+                    <li>Questions posed: "What new words do you like to use? How does it feel to speak these words? What stories have you learned through these words?"</li>
+                    <li>Documentation through audio recording (with permission) and visual representations</li>
+                </ul>
+                
+                <h4>Elder and Knowledge Keeper Guidance:</h4>
+                <ul>
+                    <li>Quarterly gatherings with Elders to reflect on the program's direction</li>
+                    <li>Questions posed: "Are we following proper protocols? What strengths do you see emerging? How can we better honor the language?"</li>
+                    <li>Documentation through written reflections and implementation of recommendations</li>
+                </ul>
+                
+                <h4>Family Story Gathering:</h4>
+                <ul>
+                    <li>Semi-annual collection of family stories about language use at home</li>
+                    <li>Questions posed through conversation: "What words or phrases has your child brought home? How has language learning affected your family relationships? What more would support your family's language journey?"</li>
+                    <li>Documentation through family journals and recorded conversations (with permission)</li>
+                </ul>
+                
+                <h4>Community Language Assessment:</h4>
+                <ul>
+                    <li>Annual community gathering to assess language vitality</li>
+                    <li>Collaborative mapping of where and how language is being used</li>
+                    <li>Questions posed: "Where is the language living now that it wasn't before? What new contexts for language use have emerged? What barriers remain to language revitalization?"</li>
+                    <li>Documentation through community-created maps and action plans</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Project by Ben Zhang 101462230</p>
+        </div>
+    </footer>
+</body>
+</html>
