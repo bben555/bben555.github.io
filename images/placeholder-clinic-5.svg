@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder photo of a cozy corner in the clinic">
+  <rect width="800" height="600" fill="#cf9f4d"/>
+  <circle cx="640" cy="80" r="220" fill="#b98832"/>
+  <g stroke="#2c2620" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <rect x="330" y="300" width="140" height="90" rx="20"/>
+    <path d="M330 300c0-30 20-50 70-50s70 20 70 50"/>
+    <line x1="330" y1="390" x2="330" y2="410"/>
+    <line x1="470" y1="390" x2="470" y2="410"/>
+  </g>
+  <rect x="316" y="472" width="168" height="34" rx="17" fill="#2c2620" opacity="0.2"/>
+  <text x="400" y="494" text-anchor="middle" font-family="Karla, sans-serif" font-size="14" font-weight="700" fill="#2c2620" letter-spacing="0.5">CLINIC PHOTO COMING SOON</text>
+</svg>

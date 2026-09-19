@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" role="img" aria-label="Illustration of ripples of loving-kindness radiating from a lotus">
+  <g fill="none" stroke="#c17a45" stroke-width="1.6" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.55">
+    <circle cx="300" cy="300" r="255"/>
+  </g>
+  <g fill="none" stroke="#303c64" stroke-width="1.6" stroke-dasharray="1 9" stroke-linecap="round" opacity="0.4">
+    <circle cx="300" cy="300" r="205"/>
+  </g>
+  <g fill="none" stroke="#cf9f4d" stroke-width="1.8" opacity="0.7">
+    <path d="M70 330c60 34 130 34 190 0"/>
+    <path d="M300 555c34-60 34-130 0-190"/>
+  </g>
+
+  <!-- pollen / light dots -->
+  <g fill="#cf9f4d">
+    <circle cx="90" cy="150" r="5"/>
+    <circle cx="470" cy="120" r="4"/>
+    <circle cx="500" cy="360" r="6"/>
+    <circle cx="60" cy="410" r="4"/>
+    <circle cx="150" cy="500" r="5"/>
+  </g>
+  <g fill="#8c4a5c" opacity="0.7">
+    <circle cx="130" cy="90" r="3.5"/>
+    <circle cx="430" cy="460" r="4.5"/>
+    <circle cx="480" cy="220" r="3"/>
+  </g>
+
+  <!-- lotus, echoing the wordmark -->
+  <g transform="translate(300,340)">
+    <path d="M0 -230 C48 -160 66 -96 40 -30 C14 36 -14 36 -40 -30 C-66 -96 -48 -160 0 -230Z" fill="#303c64"/>
+    <path d="M-108 -150 C-64 -104 -44 -46 -58 12 C-72 66 -100 70 -128 24 C-156 -24 -158 -92 -132 -140 C-126 -150 -116 -156 -108 -150Z" fill="#3a4874"/>
+    <path d="M108 -150 C64 -104 44 -46 58 12 C72 66 100 70 128 24 C156 -24 158 -92 132 -140 C126 -150 116 -156 108 -150Z" fill="#3a4874"/>
+    <path d="M-190 -70 C-136 -44 -104 4 -104 62 C-104 116 -132 128 -172 100 C-212 70 -230 8 -216 -46 C-212 -60 -200 -74 -190 -70Z" fill="#6d3549"/>
+    <path d="M190 -70 C136 -44 104 4 104 62 C104 116 132 128 172 100 C212 70 230 8 216 -46 C212 -60 200 -74 190 -70Z" fill="#6d3549"/>
+    <path d="M-224 30 C-164 34 -122 68 -104 118 C-86 166 -108 188 -154 178 C-200 168 -234 122 -238 66 C-240 50 -234 32 -224 30Z" fill="#8c4a5c"/>
+    <path d="M224 30 C164 34 122 68 104 118 C86 166 108 188 154 178 C200 168 234 122 238 66 C240 50 234 32 224 30Z" fill="#8c4a5c"/>
+    <path d="M-140 108 C-76 92 -18 108 22 152 C60 192 46 216 -6 220 C-58 224 -116 198 -142 148 C-150 132 -150 112 -140 108Z" fill="#a15a6a"/>
+    <path d="M140 108 C76 92 18 108 -22 152 C-60 192 -46 216 6 220 C58 224 116 198 142 148 C150 132 150 112 140 108Z" fill="#a15a6a"/>
+    <path d="M0 90 C42 92 76 116 90 152 C104 186 84 206 40 202 C-4 198 -40 168 -40 128 C-40 108 -20 88 0 90Z" fill="#c17a45" opacity="0" />
+    <ellipse cx="0" cy="150" rx="94" ry="30" fill="#faf6ee"/>
+    <path d="M-94 150 Q0 130 94 150 Q0 122 -94 150Z" fill="#e9dcc0"/>
+  </g>
+</svg>

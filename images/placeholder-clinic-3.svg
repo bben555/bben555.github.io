@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder photo of the waiting area">
+  <rect width="800" height="600" fill="#c17a45"/>
+  <circle cx="680" cy="500" r="200" fill="#a8622f"/>
+  <g stroke="#faf6ee" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M400 380c-30-40-30-90 0-110 30 20 30 70 0 110z"/>
+    <line x1="400" y1="380" x2="400" y2="440"/>
+    <path d="M370 320c-24-8-40-30-36-56 26 0 46 16 52 40"/>
+    <path d="M430 320c24-8 40-30 36-56-26 0-46 16-52 40"/>
+  </g>
+  <rect x="316" y="472" width="168" height="34" rx="17" fill="#2c2620" opacity="0.2"/>
+  <text x="400" y="494" text-anchor="middle" font-family="Karla, sans-serif" font-size="14" font-weight="700" fill="#faf6ee" letter-spacing="0.5">CLINIC PHOTO COMING SOON</text>
+</svg>

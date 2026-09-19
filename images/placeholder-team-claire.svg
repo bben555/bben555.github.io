@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 480" role="img" aria-label="Placeholder portrait for Claire">
+  <defs>
+    <clipPath id="blobC"><path d="M320 70c46 46 66 116 48 182-20 74-78 130-152 148-72 18-146-10-182-70-34-58-46-140-8-200 38-60 108-104 182-106 42-2 82 16 112 46z"/></clipPath>
+  </defs>
+  <rect width="440" height="480" fill="#f2e9d8"/>
+  <g clip-path="url(#blobC)">
+    <rect width="440" height="480" fill="#8c4a5c"/>
+    <circle cx="220" cy="205" r="86" fill="#cf9f4d" opacity="0.9"/>
+    <path d="M96 470c14-96 60-150 124-150s110 54 124 150z" fill="#cf9f4d" opacity="0.9"/>
+  </g>
+  <g fill="none" stroke="#f2e9d8" stroke-width="3" opacity="0.55">
+    <circle cx="220" cy="205" r="86"/>
+    <path d="M96 470c14-96 60-150 124-150s110 54 124 150"/>
+  </g>
+  <rect x="132" y="418" width="176" height="34" rx="17" fill="#2c2620" opacity="0.55"/>
+  <text x="220" y="440" text-anchor="middle" font-family="Karla, sans-serif" font-size="14" font-weight="700" fill="#faf6ee" letter-spacing="0.5">PORTRAIT COMING SOON</text>
+</svg>
