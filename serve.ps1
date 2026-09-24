@@ -9,7 +9,7 @@ Write-Host "Live editing enabled - use the Edit button in the site, bottom-right
 $mime = @{
   ".html" = "text/html"; ".css" = "text/css"; ".js" = "application/javascript";
   ".svg" = "image/svg+xml"; ".png" = "image/png"; ".jpg" = "image/jpeg"; ".jpeg" = "image/jpeg";
-  ".ico" = "image/x-icon"; ".json" = "application/json"
+  ".ico" = "image/x-icon"; ".json" = "application/json"; ".pdf" = "application/pdf"
 }
 
 $rootFull = [System.IO.Path]::GetFullPath($root)
