@@ -14,12 +14,22 @@
   var KB = [
     {
       keywords: ['cdcp', 'dental care plan', 'insurance', 'coverage', 'covered'],
-      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics, and we also work with many private insurance plans. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income. Bring any plan details to your free consultation and we'll help you understand your exact coverage.",
+      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics, and we also direct bill many private insurance plans. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income. Bring any plan details to your free consultation and we'll help you understand your exact coverage.",
       link: { label: 'See the full CDCP breakdown', href: PAGES.cdcp }
     },
     {
-      keywords: ['cost', 'price', 'how much', 'expensive', 'fee', 'afford'],
+      keywords: ['direct bill', 'direct billing', 'bill my insurance', 'bill insurance directly'],
+      reply: "Yes — we offer direct billing for private insurance plans, so in many cases you won't need to pay out of pocket and wait to be reimbursed.",
+      link: { label: 'See Coverage Details', href: PAGES.cdcp }
+    },
+    {
+      keywords: ['cost', 'price', 'how much', 'expensive', ' fee ', ' fees', 'afford'],
       reply: "Cost depends on your specific needs, so we offer a free, no-obligation consultation to give you an accurate quote after examining your denture and oral cavity in person.",
+      link: { label: 'Book a Free Consultation', href: PAGES.contact }
+    },
+    {
+      keywords: ['payment', 'pay by', 'pay with', 'credit card', 'debit', 'e-transfer', 'etransfer', 'how do i pay'],
+      reply: "We accept all major payment methods — cash, debit, credit card, and e-transfer, whatever's easiest for you.",
       link: { label: 'Book a Free Consultation', href: PAGES.contact }
     },
     {
@@ -48,13 +58,18 @@
       link: { label: 'Learn about Immediate Dentures', href: PAGES.services }
     },
     {
-      keywords: ['reline', 'rebase', 'repair', 'broken', 'crack', 'fix my denture', 'loose', 'slipping', "won't stay in", 'wont stay in', 'falls out', 'fall out', 'shifting', "doesn't fit", 'dont fit'],
+      keywords: ['broken', 'crack', 'cracked', 'snapped', 'chipped', 'fix my denture', 'repair', 'emergency'],
+      reply: "If your denture breaks, contact us right away and we'll get you booked in as soon as possible — simple repairs can sometimes be done the same day, depending on the damage.",
+      link: { label: 'Contact Us Now', href: PAGES.contact }
+    },
+    {
+      keywords: ['reline', 'rebase', 'loose', 'slipping', "won't stay in", 'wont stay in', 'falls out', 'fall out', 'shifting', "doesn't fit", 'dont fit'],
       reply: 'A denture that has gotten loose, shifts, or slips is usually a sign it needs a reline (or in some cases a repair) as your gums and jawbone change shape over time — very fixable, and often covered in part by CDCP.',
       link: { label: 'See all denture services', href: PAGES.services }
     },
     {
       keywords: ['sore spot', 'sore gum', 'hurts', 'painful', 'pain', 'rubbing', 'irritat'],
-      reply: "Some soreness while you adjust to a new denture is common, but you shouldn't have to just live with it — come back in and we'll adjust the fit. Small tweaks make a big difference.",
+      reply: "Some soreness while you adjust to a new denture is common. Adjustments are included at no charge for the first 3 months after you get a new denture, so come back in and we'll fine-tune the fit.",
       link: { label: 'Book an adjustment', href: PAGES.contact }
     },
     {
@@ -64,7 +79,7 @@
     },
     {
       keywords: ['location', 'address', 'where are you', 'steveston', 'richmond', 'new westminster', 'direction', 'map'],
-      reply: 'We have two locations: Unit 103 – 3811 Chatham St in Richmond (Steveston), and 442 6th St in New Westminster.',
+      reply: 'We have two locations: Unit 103 – 3811 Chatham St in Richmond (Steveston), and 442 6th St in New Westminster. Both offer the exact same services, so pick whichever is more convenient for you.',
       link: { label: 'Get directions to either clinic', href: PAGES.contact }
     },
     {
@@ -83,7 +98,7 @@
       link: { label: 'More FAQs', href: PAGES.faq }
     },
     {
-      keywords: ['last', 'lifespan', 'how long do', 'replace my denture'],
+      keywords: [' last ', 'lifespan', 'how long do', 'replace my denture'],
       reply: 'Dentures are generally recommended to be replaced every 5 years, though it varies based on materials used and how your mouth changes over time.',
       link: { label: 'More FAQs', href: PAGES.faq }
     },
