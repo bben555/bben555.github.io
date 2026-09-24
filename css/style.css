@@ -35,7 +35,7 @@
 }
 
 *, *::before, *::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; }
 body{
   margin: 0;
   background: var(--paper);
@@ -191,13 +191,6 @@ body::before{
 .main-nav a.active{ color: var(--mauve-deep); }
 
 .header-cta{ display: flex; align-items: center; gap: 1.1rem; }
-.header-phone{
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--indigo-deep);
-  font-size: 1.02rem;
-}
-.header-phone small{ display:block; font-family: var(--font-body); font-weight: 600; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
 
 .nav-toggle{
   display: none;
@@ -224,7 +217,17 @@ body::before{
   .main-nav ul{ flex-direction: column; align-items: flex-start; gap: 1.6rem; }
   .main-nav a{ font-size: 1.2rem; }
   .nav-toggle{ display: flex; }
-  .header-phone{ display: none; }
+  .header-cta{ gap: 0.6rem; }
+}
+
+/* narrow phones: brand + button were colliding */
+@media (max-width: 480px){
+  .brand{ gap: 0.4rem; }
+  .brand img{ height: 36px; }
+  .brand-text strong{ font-size: 0.95rem; }
+  .brand-text span{ font-size: 0.56rem; letter-spacing: 0.08em; }
+  .header-cta .btn{ padding: 0.6em 0.9em; font-size: 0.78rem; white-space: nowrap; }
+  .nav-toggle{ padding: 8px 0 8px 6px; }
 }
 
 /* ============ HERO ============ */
