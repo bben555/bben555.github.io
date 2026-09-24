@@ -320,6 +320,14 @@ body::before{
   font-size: 2.4rem;
   color: var(--mauve-deep);
 }
+.welcome-logo{
+  display: block;
+  width: 55%;
+  max-width: 130px;
+  height: auto;
+  margin-top: 2rem;
+  opacity: 0.95;
+}
 .welcome-copy p{ font-size: 1.12rem; }
 .welcome-copy .lede{ font-family: var(--font-display); font-size: 1.5rem; color: var(--indigo-deep); font-weight: 500; }
 

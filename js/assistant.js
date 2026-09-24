@@ -14,7 +14,7 @@
   var KB = [
     {
       keywords: ['cdcp', 'dental care plan', 'insurance', 'coverage', 'covered'],
-      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics, and we also direct bill many private insurance plans. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income. Bring any plan details to your free consultation and we'll help you understand your exact coverage.",
+      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics, and we also direct bill many private insurance plans. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income, and if you qualify for the 100% tier, we don't charge any copay at all. Bring any plan details to your free consultation and we'll help you understand your exact coverage.",
       link: { label: 'See the full CDCP breakdown', href: PAGES.cdcp }
     },
     {
