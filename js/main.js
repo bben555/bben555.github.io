@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
       #__edit_toolbar .__edit-start{background:#8c4a5c;color:#fff;}
       #__edit_toolbar .__edit-save{background:#3a6b3f;color:#fff;}
       #__edit_toolbar .__edit-cancel{background:#333;color:#fff;}
-      #__edit_status{position:fixed;bottom:72px;right:20px;z-index:99999;background:#222;color:#fff;padding:0.7em 1.1em;border-radius:10px;font-size:0.82rem;font-family:Karla,sans-serif;max-width:300px;box-shadow:0 8px 20px -8px rgba(0,0,0,0.5);}
+      #__edit_toolbar .__edit-push{background:#2f3c64;color:#fff;}
+      #__edit_toolbar button:disabled{opacity:0.6;cursor:wait;}
+      #__edit_status{position:fixed;bottom:72px;right:20px;z-index:99999;background:#222;color:#fff;padding:0.7em 1.1em;border-radius:10px;font-size:0.82rem;font-family:Karla,sans-serif;max-width:340px;box-shadow:0 8px 20px -8px rgba(0,0,0,0.5);}
       body[data-editing="true"] .reveal{opacity:1 !important;transform:none !important;}
       body[data-editing="true"] [contenteditable="true"]:hover{outline:1.5px dashed #cf9f4d;outline-offset:2px;}
     `;
@@ -103,23 +105,38 @@ document.addEventListener('DOMContentLoaded', () => {
     status.style.display = 'none';
     document.body.appendChild(status);
 
-    function showStatus(msg, isError) {
+    function showStatus(msg, isError, holdMs) {
       status.textContent = msg;
       status.style.display = 'block';
+      status.style.whiteSpace = 'pre-wrap';
       status.style.background = isError ? '#8c2e2e' : '#3a6b3f';
       clearTimeout(showStatus._t);
-      showStatus._t = setTimeout(() => { status.style.display = 'none'; }, 5000);
+      showStatus._t = setTimeout(() => { status.style.display = 'none'; }, holdMs || 5000);
     }
 
     function renderStart() {
-      toolbar.innerHTML = '<button class="__edit-start">✏️ Edit This Page</button>';
+      toolbar.innerHTML = '<button class="__edit-start">✏️ Edit This Page</button><button class="__edit-push">⬆️ Push to GitHub</button>';
       toolbar.querySelector('.__edit-start').addEventListener('click', startEdit);
+      toolbar.querySelector('.__edit-push').addEventListener('click', pushToGitHub);
     }
 
     function renderEditing() {
       toolbar.innerHTML = '<button class="__edit-save">💾 Save Changes</button><button class="__edit-cancel">✖ Exit</button>';
       toolbar.querySelector('.__edit-save').addEventListener('click', saveEdit);
       toolbar.querySelector('.__edit-cancel').addEventListener('click', stopEdit);
+    }
+
+    function pushToGitHub() {
+      const btn = toolbar.querySelector('.__edit-push');
+      if (btn) { btn.textContent = '⬆️ Pushing…'; btn.disabled = true; }
+      showStatus('Pushing to GitHub… if a browser login window opens, sign in there first.', false, 30000);
+      fetch('/__push', { method: 'POST' })
+        .then(r => r.text().then(text => ({ ok: r.ok, text })))
+        .then(({ ok, text }) => {
+          showStatus((ok ? 'Pushed to GitHub ✓\n' : 'Push had a problem:\n') + text, !ok, 12000);
+        })
+        .catch(err => showStatus('Push failed — ' + err.message, true, 12000))
+        .finally(() => { if (btn) { btn.textContent = '⬆️ Push to GitHub'; btn.disabled = false; } });
     }
 
     function startEdit() {
