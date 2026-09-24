@@ -329,6 +329,7 @@ body::before{
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+.predetermination-grid{ grid-template-columns: repeat(2, 1fr); }
 .tilt-card{
   background: var(--paper);
   border: 1px solid var(--cream-line);
