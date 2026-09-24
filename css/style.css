@@ -261,7 +261,7 @@ body::before{
   transform: rotate(-2deg);
   border: 6px solid var(--paper);
 }
-.hero-photo img{ width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; object-position: center 32%; display: block; }
+.hero-photo img{ width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: center 30%; display: block; }
 .hero-blob-bg{
   position: absolute;
   top: -12%; right: -18%;
