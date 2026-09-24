@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clone.querySelector('#__edit_toolbar')?.remove();
       clone.querySelector('#__edit_status')?.remove();
       clone.querySelector('#__edit_styles')?.remove();
+      clone.querySelector('#metta-assistant')?.remove();
       const body = clone.querySelector('body');
       body?.removeAttribute('data-editing');
       body?.removeAttribute('contenteditable');
