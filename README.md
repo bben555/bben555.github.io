@@ -25,8 +25,10 @@ To change the destination, or the redirect page after sending, edit the hidden f
 ```html
 <form ... action="https://formsubmit.co/1ae3dcd6b397dd84763282120b27f366" method="POST">
   <input type="hidden" name="_subject" value="...">   <!-- email subject line -->
-  <input type="hidden" name="_next" value="thank-you.html">  <!-- redirect after sending -->
+  <input type="hidden" name="_next" value="https://mettadentures.com/thank-you.html">  <!-- redirect after sending -->
 ```
+
+**Important:** `_next` must be a full absolute URL (`https://mettadentures.com/...`), not a relative path like `thank-you.html`. FormSubmit resolves a relative `_next` against its own domain, not yours — so it redirects visitors to a nonexistent page on formsubmit.co and shows a confusing "Form should POST" error instead of your thank-you page. If you ever change domains, update this value to match.
 
 If FormSubmit ever needs to be swapped out (e.g. for more spam filtering or submission limits), [Formspree](https://formspree.io) is a solid free alternative — same idea, just requires a quick sign-up to get a form endpoint URL.
 
