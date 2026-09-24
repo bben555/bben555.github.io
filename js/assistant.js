@@ -14,12 +14,22 @@
   var KB = [
     {
       keywords: ['cdcp', 'dental care plan', 'insurance', 'coverage', 'covered'],
-      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income.",
+      reply: "We're registered CDCP providers at both our Steveston and New Westminster clinics, and we also work with many private insurance plans. CDCP covers a large portion of complete dentures, partials, relines and repairs — how much depends on your household income. Bring any plan details to your free consultation and we'll help you understand your exact coverage.",
       link: { label: 'See the full CDCP breakdown', href: PAGES.cdcp }
     },
     {
       keywords: ['cost', 'price', 'how much', 'expensive', 'fee', 'afford'],
       reply: "Cost depends on your specific needs, so we offer a free, no-obligation consultation to give you an accurate quote after examining your denture and oral cavity in person.",
+      link: { label: 'Book a Free Consultation', href: PAGES.contact }
+    },
+    {
+      keywords: ['first visit', 'first appointment', 'new patient', 'what to expect', 'what happens at'],
+      reply: "Your first visit is a free, no-obligation consultation — we'll examine your current denture or oral cavity in person, talk through your options, and give you an accurate price before any treatment begins. No sales pitch, just a conversation.",
+      link: { label: 'Book Your Free Consultation', href: PAGES.contact }
+    },
+    {
+      keywords: ['how many visits', 'how many appointments', 'how long does it take', 'how long will it take', 'timeline'],
+      reply: "It varies by treatment — a straightforward reline can be a single visit, while a new complete denture usually involves a few appointments for fitting and adjustments. We'll map out the exact timeline for you at your free consultation.",
       link: { label: 'Book a Free Consultation', href: PAGES.contact }
     },
     {
@@ -33,9 +43,19 @@
       link: { label: 'See all denture services', href: PAGES.services }
     },
     {
-      keywords: ['reline', 'rebase', 'repair', 'broken', 'crack', 'fix my denture'],
-      reply: 'Repairs and relines keep your current dentures comfortable and well-fitted as your mouth changes over time — we handle both.',
+      keywords: ['extraction', 'pull my tooth', 'pull teeth', 'pulling teeth', 'remove my tooth', 'wisdom tooth'],
+      reply: "Denturists don't perform extractions — for that we work alongside your dentist or an oral surgeon. If teeth need to come out, we can design an immediate denture in advance so you're not without teeth while you heal.",
+      link: { label: 'Learn about Immediate Dentures', href: PAGES.services }
+    },
+    {
+      keywords: ['reline', 'rebase', 'repair', 'broken', 'crack', 'fix my denture', 'loose', 'slipping', "won't stay in", 'wont stay in', 'falls out', 'fall out', 'shifting', "doesn't fit", 'dont fit'],
+      reply: 'A denture that has gotten loose, shifts, or slips is usually a sign it needs a reline (or in some cases a repair) as your gums and jawbone change shape over time — very fixable, and often covered in part by CDCP.',
       link: { label: 'See all denture services', href: PAGES.services }
+    },
+    {
+      keywords: ['sore spot', 'sore gum', 'hurts', 'painful', 'pain', 'rubbing', 'irritat'],
+      reply: "Some soreness while you adjust to a new denture is common, but you shouldn't have to just live with it — come back in and we'll adjust the fit. Small tweaks make a big difference.",
+      link: { label: 'Book an adjustment', href: PAGES.contact }
     },
     {
       keywords: ['service', 'denture type', 'complete denture', 'partial', 'immediate denture', 'kind of denture'],
@@ -78,6 +98,11 @@
       link: { label: 'Meet the Team', href: PAGES.about }
     },
     {
+      keywords: ['language', 'speak cantonese', 'speak mandarin', 'speak chinese', 'mandarin', 'cantonese', 'chinese speaking', 'chinese-speaking'],
+      reply: 'Yes — our denturist Wolf speaks Cantonese, Mandarin, and English, and our receptionist Claire speaks English and Mandarin too.',
+      link: { label: 'Meet the Team', href: PAGES.about }
+    },
+    {
       keywords: ['metta', 'name mean', 'loving-kindness', 'loving kindness'],
       reply: "Metta is Pali for loving-kindness — the simple wish for another being's happiness. It's the philosophy behind how we care for every patient.",
       link: { label: 'Our Story', href: PAGES.about }
@@ -109,6 +134,7 @@
     { label: 'Do you accept CDCP?', query: 'do you accept cdcp insurance' },
     { label: 'Where are you located?', query: 'where are your locations' },
     { label: 'Book an appointment', query: 'i want to book an appointment' },
+    { label: 'What happens at my first visit?', query: 'what happens at my first visit' },
     { label: 'Meet the team', query: 'meet the team' }
   ];
 
