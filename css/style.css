@@ -250,6 +250,15 @@ body::before{
 
 .hero-art{ position: relative; z-index: 2; }
 .hero-art svg{ width: 100%; height: auto; }
+.hero-photo{
+  position: relative;
+  border-radius: var(--radius-blob-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(-2deg);
+  border: 6px solid var(--paper);
+}
+.hero-photo img{ width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 25%; display: block; }
 .hero-blob-bg{
   position: absolute;
   top: -12%; right: -18%;
@@ -262,6 +271,7 @@ body::before{
 
 /* ============ SECTION WRAPPERS ============ */
 .section{ padding: 6rem 0; }
+.section-sm{ padding: 2.75rem 0; }
 .section-alt{ background: var(--paper-alt); }
 .section-deep{ background: var(--indigo-deep); color: var(--paper); }
 .section-deep h2, .section-deep h3{ color: var(--paper); }
@@ -288,6 +298,12 @@ body::before{
   gap: 3.5rem;
   align-items: start;
 }
+.welcome-block-tight{
+  align-items: center;
+  gap: 2.4rem;
+}
+.welcome-block-tight .welcome-copy .lede{ margin-bottom: 0.3em; }
+.welcome-block-tight .welcome-copy p:last-child{ margin-bottom: 0; }
 .welcome-mark{
   font-family: var(--font-display);
   font-size: 7rem;
@@ -341,6 +357,12 @@ body::before{
   box-shadow: 0 4px 8px -4px rgba(0,0,0,0.25);
   opacity: 0.9;
 }
+.card-grid .tilt-card:nth-child(2) .tape{ left: 44%; transform: translateX(-50%) rotate(4deg); }
+.card-grid .tilt-card:nth-child(3) .tape{ left: 57%; transform: translateX(-50%) rotate(-5deg); }
+.card-grid .tilt-card:nth-child(4) .tape{ left: 47%; transform: translateX(-50%) rotate(2deg); }
+.card-grid .tilt-card:nth-child(5) .tape{ left: 58%; transform: translateX(-50%) rotate(-2.5deg); }
+.card-grid .tilt-card:nth-child(6) .tape{ left: 41%; transform: translateX(-50%) rotate(5deg); }
+.card-grid .tilt-card:nth-child(7) .tape{ left: 52%; transform: translateX(-50%) rotate(-4deg); }
 
 /* ============ ABOUT TEASER / SPLIT ============ */
 .split{
