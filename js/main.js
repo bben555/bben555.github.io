@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.id = '__edit_styles';
     style.textContent = `
-      #__edit_toolbar{position:fixed;bottom:20px;right:20px;z-index:99999;display:flex;gap:8px;font-family:Karla,sans-serif;}
+      #__edit_toolbar{position:fixed;bottom:20px;right:20px;z-index:99999;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:calc(100vw - 40px);font-family:Karla,sans-serif;}
       #__edit_toolbar button{border:none;border-radius:100px;padding:0.7em 1.3em;font-weight:700;font-size:0.85rem;cursor:pointer;box-shadow:0 8px 20px -8px rgba(0,0,0,0.5);}
       #__edit_toolbar .__edit-start{background:#8c4a5c;color:#fff;}
       #__edit_toolbar .__edit-save{background:#3a6b3f;color:#fff;}
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       #__edit_status{position:fixed;bottom:72px;right:20px;z-index:99999;background:#222;color:#fff;padding:0.7em 1.1em;border-radius:10px;font-size:0.82rem;font-family:Karla,sans-serif;max-width:340px;box-shadow:0 8px 20px -8px rgba(0,0,0,0.5);}
       body[data-editing="true"] .reveal{opacity:1 !important;transform:none !important;}
       body[data-editing="true"] [contenteditable="true"]:hover{outline:1.5px dashed #cf9f4d;outline-offset:2px;}
+      @media(max-width:480px){ #__edit_toolbar{flex-direction:column;align-items:flex-end;} }
     `;
     document.head.appendChild(style);
 
