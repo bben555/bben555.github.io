@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tools/
+Disallow: /serve.ps1
+
+Sitemap: https://mettadentures.com/sitemap.xml

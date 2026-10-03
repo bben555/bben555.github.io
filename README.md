@@ -57,6 +57,13 @@ Once the GitHub Pages site is live, you can point your existing domain at it ins
    - A `CNAME` record for `www` pointing to `<your-username>.github.io`
 3. DNS changes can take a few hours to propagate. Once they do, check "Enforce HTTPS" in the Pages settings.
 
+## SEO upkeep
+
+- **Address, phone or email changes:** also update the structured-data block (`<script type="application/ld+json">`) in the `<head>` of both `index.html` and `contact.html` — search engines read business details from there.
+- **New pages:** add the page to `sitemap.xml`, and give it its own `<title>`, description, canonical link and `og:` tags (copy the pattern from an existing page's `<head>`).
+- **FAQ edits** need nothing extra — the FAQ structured data rebuilds itself from the visible questions and answers.
+- After deploying, submit `https://mettadentures.com/sitemap.xml` in [Google Search Console](https://search.google.com/search-console).
+
 ## Project structure
 
 - `index.html`, `about.html`, `services.html`, `faq.html`, `contact.html`, `thank-you.html` — pages

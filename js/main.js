@@ -1,4 +1,25 @@
+// Rebuilds the FAQPage JSON-LD from the visible Q&A so structured data never drifts from page content.
+function buildFaqSchemaJson(root) {
+  const items = root.querySelectorAll('.accordion[data-faq] .accordion-item');
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: Array.from(items).map(item => ({
+      '@type': 'Question',
+      name: item.querySelector('.accordion-trigger span').textContent.replace(/\s+/g, ' ').trim(),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.querySelector('.accordion-panel-inner').textContent.replace(/\s+/g, ' ').trim()
+      }
+    }))
+  };
+  return '\n' + JSON.stringify(schema, null, 2).replace(/</g, '\\u003c') + '\n';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  const faqSchema = document.getElementById('faq-schema');
+  if (faqSchema) faqSchema.textContent = buildFaqSchemaJson(document);
+
   // mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
@@ -179,6 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       clone.querySelector('.main-nav.open')?.classList.remove('open');
       clone.querySelector('.nav-toggle.active')?.classList.remove('active');
+      const cloneFaqSchema = clone.querySelector('#faq-schema');
+      if (cloneFaqSchema) cloneFaqSchema.textContent = buildFaqSchemaJson(clone);
 
       const html = '<!DOCTYPE html>\n' + clone.outerHTML;
       const savePath = (location.pathname.replace(/^\//, '') || 'index.html');

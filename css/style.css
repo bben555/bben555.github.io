@@ -3,8 +3,6 @@
    Warm, hand-crafted, loving-kindness inspired design system
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap');
-
 :root{
   /* palette — pulled from the Metta lotus mark */
   --indigo: #303c64;
