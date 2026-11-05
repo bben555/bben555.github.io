@@ -78,14 +78,14 @@
       link: { label: 'Explore Services', href: PAGES.services }
     },
     {
+      keywords: ['hour', 'open', 'when are you', 'appointment only', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'weekend'],
+      reply: "Our New Westminster clinic is open Tuesday to Friday, 11am–4pm. Our Steveston (Richmond) clinic sees patients by appointment only on Mondays and Saturdays — text or call to book.",
+      link: { label: 'Book Now', href: PAGES.contact }
+    },
+    {
       keywords: ['location', 'address', 'where are you', 'steveston', 'richmond', 'new westminster', 'direction', 'map'],
       reply: 'We have two locations: Unit 103 – 3811 Chatham St in Richmond (Steveston), and 442 6th St in New Westminster. Both offer the exact same services, so pick whichever is more convenient for you.',
       link: { label: 'Get directions to either clinic', href: PAGES.contact }
-    },
-    {
-      keywords: ['hour', 'open', 'when are you', 'appointment only'],
-      reply: "Both locations are appointment only — there aren't fixed drop-in hours. Text or call and we'll find a time that works.",
-      link: { label: 'Book Now', href: PAGES.contact }
     },
     {
       keywords: ['sleep'],
