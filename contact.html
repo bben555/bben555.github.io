@@ -95,6 +95,14 @@
         "addressRegion": "BC",
         "addressCountry": "CA"
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "11:00",
+          "closes": "16:00"
+        }
+      ],
       "paymentAccepted": "Cash, Debit Card, Credit Card, E-Transfer",
       "currenciesAccepted": "CAD"
     }
@@ -163,19 +171,19 @@
         </div>
         <div class="info-card">
           <h4>Hours</h4>
-          <p style="margin:0;">Both locations are <strong>appointment only</strong> — call or text and we'll find a time that works for you.</p>
+          <p style="margin:0;"><strong>New Westminster:</strong> Tuesday–Friday, 11am–4pm<br><strong>Steveston, Richmond:</strong> Mondays &amp; Saturdays, by appointment only — call or text to book.</p>
         </div>
       </div>
 
       <div class="reveal">
         <h3 style="margin-bottom:1rem;">Send us a note</h3>
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/1ae3dcd6b397dd84763282120b27f366" method="POST">
+        <form class="contact-form" id="contact-form" data-endpoint="aHR0cHM6Ly9mb3Jtc3VibWl0LmNvLzFhZTNkY2Q2YjM5N2RkODQ3NjMyODIxMjBiMjdmMzY2" method="POST">
           <!-- FormSubmit configuration — see README-form-setup.md for details -->
           <input type="hidden" name="_subject" value="New message from the Metta Denture Clinic website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://mettadentures.com/thank-you.html">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_blacklist" value="SEO, backlinks, ranking on google, guest post, DA score, website traffic">
+          <input type="hidden" name="_blacklist" value="SEO, backlink, backlinks, ranking on google, first page of google, rank higher, guest post, sponsored post, DA score, domain authority, website traffic, organic traffic, web design, website design, website redesign, web development, app development, digital marketing, marketing agency, marketing services, lead generation, generate leads, social media marketing, google maps ranking, google business profile, google reviews, buy reviews, outsourcing, virtual assistant, white label, crypto, bitcoin, forex, casino, betting, viagra, cialis, investment opportunity, business loan, unsubscribe, opt out, http://, https://, www.">
 
           <div>
             <label for="name">Name</label>
@@ -193,6 +201,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us a little about what you need" required></textarea>
           </div>
+          <noscript><p class="form-note">This form needs JavaScript. Please text us at (778) 751-9613 instead.</p></noscript>
           <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Message</button>
           <p class="form-note" id="form-note">We typically reply within 1 business day. For anything urgent, texting <a href="sms:7787519613" style="color:var(--mauve-deep);font-weight:700;">(778) 751-9613</a> is the fastest way to reach us.</p>
         </form>
@@ -270,7 +279,8 @@
       </div>
       <div>
         <h4>Hours</h4>
-        <p style="color:#cfc4aa;font-size:0.95rem;">Both locations see patients by appointment only.</p>
+        <p style="color:#cfc4aa;font-size:0.95rem;"><strong style="color:#f3ead6;">New Westminster</strong><br>Tue–Fri, 11am–4pm</p>
+        <p style="color:#cfc4aa;font-size:0.95rem;margin-top:0.6em;"><strong style="color:#f3ead6;">Steveston, Richmond</strong><br>Mon &amp; Sat, by appointment only</p>
         <p style="margin-top:0.8em;"><a href="contact.html" style="color:#f3ead6;font-weight:700;">Contact us →</a></p>
       </div>
     </div>
