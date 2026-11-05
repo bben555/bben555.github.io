@@ -63,10 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // contact form — submits to FormSubmit.co; just show a "sending" state
+  // contact form — submits to FormSubmit.co. The endpoint is only attached at submit time so
+  // HTML-scraping bots can't find it; obvious bot submissions are dropped silently.
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', () => {
+    const loadedAt = Date.now();
+    contactForm.addEventListener('submit', (e) => {
+      const honey = contactForm.querySelector('input[name="_honey"]');
+      const message = contactForm.querySelector('#message');
+      const note = document.getElementById('form-note');
+      const isBot = (honey && honey.value) || Date.now() - loadedAt < 4000;
+      if (isBot) {
+        e.preventDefault();
+        window.location.href = 'thank-you.html';
+        return;
+      }
+      if (message && /https?:\/\/|www\.|\[url|<a\s/i.test(message.value)) {
+        e.preventDefault();
+        if (note) note.innerHTML = 'Please remove any web links from your message and try again — or just text us at <a href="sms:7787519613" style="color:var(--mauve-deep);font-weight:700;">(778) 751-9613</a>.';
+        message.focus();
+        return;
+      }
+      contactForm.action = atob(contactForm.dataset.endpoint);
       const btn = contactForm.querySelector('button[type="submit"]');
       if (btn) {
         btn.textContent = 'Sending…';
